@@ -171,7 +171,72 @@ $("#remove-tasks").on("click", function() {
   saveTasks();
 });
 
+
 // load tasks for the first time
 loadTasks();
+//make the lists sortable
+$(".list-group").sortable({
+  connectWith: $(".card .list-group"),
+  scroll: false,
+  tolerance: "pointer",
+  helper: "clone",
+  activate: function(event) {
+    //console.log("activate", this);
+  },
+  deactivate: function(event) {
+    //console.log("deactivate", this);
+  },
+  over: function(event) {
+    //console.log("over", event.target);
+  },
+  out: function(event) {
+   //console.log("out", event.target);
+  },
+  update: function(event) {
+   var tempArr = [];
+   //loop over all children in sortable list
+    $(this).children().each(function(){
+      var text = $(this)
+      .find("p")
+      .text()
+      .trim();
 
+      var date = $(this)
+      .find("span")
+      .text()
+      .trim();
 
+      //Push to temp array
+      tempArr.push({
+        text:text,
+        date:date
+      });
+    });
+
+    //trim down list id to match objct property
+    var arrName = $(this)
+    .attr("id")
+    .replace("list-", "");
+    //Update the correct task array with the new array
+    tasks[arrName] = tempArr;
+    saveTasks();
+    // console.log(tempArr)
+  }
+
+});
+
+//Delete stuff
+$("#trash").droppable({
+  accept: ".card .list-group-item",
+  tolerance: "touch",
+  drop: function(event, ui) {
+    console.log("drop");
+    ui.draggable.remove();
+  },
+  over: function(event, ui) {
+    console.log("over");
+  },
+  out: function(event, ui) {
+    console.log("out");
+  },
+});

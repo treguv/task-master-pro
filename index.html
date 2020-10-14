@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- add the style sheet here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Taskmaster Pro</title>
 </head>
@@ -18,7 +20,8 @@
       <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">Add
         Task</button>
       <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-      <p class="mt-auto d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
+      <p class="mt-auto d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas
+        architecto ipsa
         excepturi aut non
         laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis iste?
       </p>
@@ -28,71 +31,73 @@
         <!-- To Do -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-            <h4 class = "card-header bg-dark text-light">
+            <h4 class="card-header bg-dark text-light">
               To Do
             </h4>
-          </div>
-          <ul id="list-toDo" class="list-group list-group-flush">
-            <li class = "list-group-item">
-              <span class ="badge-primary badge badge-pill">05/28/2020</span>
-              <p class="m-1">Sample task to do</p>
-            </li>
 
-          </ul>
+            <ul id="list-toDo" class="list-group list-group-flush">
+              <!-- <li class = "list-group-item">
+                <span class ="badge-primary badge badge-pill">05/28/2020</span>
+                <p class="m-1">Sample task to do</p>
+              </li> -->
+
+            </ul>
+          </div>
         </div>
         <!--Todo End-->
         <!-- In Progress -->
-         <!-- To Do -->
-         <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <!-- To Do -->
+        <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-            <h4 class = "card-header bg-dark text-light">
+            <h4 class="card-header bg-dark text-light">
               In Progress
             </h4>
-          </div>
-          <ul id="list-inProgress" class="list-group list-group-flush">
-            <li class = "list-group-item">
-              <span class ="badge-primary badge badge-pill">05/28/2020</span>
-              <p class="m-1">Sample task in progress</p>
-            </li>
 
-          </ul>
+            <ul id="list-inProgress" class="list-group list-group-flush">
+              <!-- <li class = "list-group-item">
+                <span class ="badge-primary badge badge-pill">05/28/2020</span>
+                <p class="m-1">Sample task in progress</p>
+              </li> -->
+
+            </ul>
+          </div>
         </div>
         <!--In Progress End-->
         <!-- Review -->
-         <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-            <h4 class = "card-header bg-dark text-light">
+            <h4 class="card-header bg-dark text-light">
               In Review
             </h4>
-          </div>
-          <ul id="list-inReview" class="list-group list-group-flush">
-            <li class = "list-group-item">
-              <span class ="badge-primary badge badge-pill">05/22/2020</span>
-              <p class="m-1">Sample task to do</p>
-            </li>
+            <ul id="list-inReview" class="list-group list-group-flush">
+              <!-- <li class = "list-group-item">
+                <span class ="badge-primary badge badge-pill">05/22/2020</span>
+                <p class="m-1">Sample task to do</p>
+              </li> -->
 
-          </ul>
+            </ul>
+          </div>
         </div>
         <!--review End-->
-         <!-- Completed -->
-         <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <!-- Completed -->
+        <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-            <h4 class = "card-header bg-dark text-light">
-              In Review
+            <h4 class="card-header bg-dark text-light">
+              Completed
             </h4>
-          </div>
-          <ul id="list-completed" class="list-group list-group-flush">
-            <li class = "list-group-item">
+            <ul id="list-completed" class="list-group list-group-flush">
+              <!-- <li class = "list-group-item">
               <span class ="badge-primary badge badge-pill">05/22/2020</span>
               <p class="m-1">Sample task to do</p>
-            </li>
+            </li> -->
 
-          </ul>
+            </ul>
+          </div>
         </div>
         <!--Completed End-->
       </div>
-      <div id = "trash " class ="mt-auto">
-        <div class = " w-100 bg-danger p-3 text-center text-light display4">
+      <div id="trash" class="mt-auto">
+        <div class=" w-100 bg-danger p-3 text-center text-light display4">
           Drop Here To Remove.
         </div>
       </div>
@@ -113,7 +118,7 @@
           <form>
             <div class="form-group">
               <label for="modalTaskDescription">Task description</label>
-              <textarea class = "form-control" id="modalTaskDescription" rows="3"></textarea>
+              <textarea class="form-control" id="modalTaskDescription" rows="3"></textarea>
             </div>
             <div class="form-group">
               <label for="modalDueDate">Due date</label>
@@ -130,9 +135,12 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- add the js file here -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script
 </body>
 
 </html>
